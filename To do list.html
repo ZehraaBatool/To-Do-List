@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To do list</title>
+    <link rel="stylesheet" type="text/CSS" href="To do list.css">
+</head>
+<body>
+    <img src="https://img.freepik.com/premium-vector/you-can-it-lettering-quote_24595-205.jpg">
+    <div class="page-container">
+        <div id="myDIV" class="mainpg">
+            <h2>To Do List</h2>
+            <select id="categoryDropdown" onchange="filterTasks()">
+                <option id="options" value="all">Choose category</option>
+                <!-- Categories will be dynamically added here -->
+            </select>
+            <button id="newcatbtn" onclick="showNewCategoryInput()">Add New Category</button>
+            <input type="text" id="taskInput" placeholder="Add items">
+            <div id="newCategoryInputContainer" style="display: none;">
+                <input type="text" id="categoryInput" placeholder="Enter new category">
+            </div>
+            <br><br><br>
+            <span onclick="newElement()" class="addBtn" id="addButton">+</span>
+        </div>
+        <ul id="myUL"></ul>
+        <h2>Completed Tasks</h2>
+        <ul id="completedTasks"></ul>
+    </div>
+    <script src="To do list.js"></script>
+</body>
+</html>
